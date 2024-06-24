@@ -1,0 +1,12 @@
+{% extends 'worksrepo/base.html' %}
+
+{% block content %}
+
+    <form action="{% url 'accounts:create-account' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_div }}
+
+        <button name="submit">Create Account</button>
+    </form>
+
+{% endblock content %}
