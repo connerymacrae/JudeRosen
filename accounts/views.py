@@ -8,7 +8,7 @@ from django.contrib.auth.forms import UserCreationForm
 def create_account(request):
     # Create a new user account
     if request.method != 'POST':
-        # Display black create account form.
+        # Display blank create account form.
         form = UserCreationForm()
     else:
         # Process completed form.
@@ -23,5 +23,3 @@ def create_account(request):
     # Display a blank or invalid form.
     context = {'form': form}
     return render(request, 'registration/create_account.html', context)
-
-
